@@ -2,11 +2,11 @@
 > Use your your browser do develop smart contracts for Signum Network
 
 ## Objective
-Create a simple and effective way do write and deploy smart contract on Signum, using SmartC compiler.
+Create a simple and effective way to write and deploy smart contract on Signum, using SmartC compiler.
 
 ## Usage
-[Run on gitpages](https://deleterium.github.io/SmartC/index.html) the latest stable version.
-Optionally run the development version at [Vercel](https://smart-c.vercel.app) or choose a previous compiler version at [https://deleterium.info/SmartC/](https://deleterium.info/SmartC/).
+[Run on vercel](https://smartc-web-ui.vercel.app/) the latest stable version.
+Optionally choose a previous compiler version at [https://deleterium.info/SmartC/](https://deleterium.info/SmartC/).
 After compiling, information to create the Smart Contract is presented and it is possible to deploy the contract on your own local node.
 
 ## Documentation / FAQ / Lessons
