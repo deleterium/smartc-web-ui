@@ -1,0 +1,23 @@
+name: SmartC Tests
+
+on: [ push ]
+
+jobs:
+  build-smartc:
+    name: Test and Build SmartC
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Run SmartC Tests
+        working-directory: ./
+        run: |
+          npm ci
+          npm run build

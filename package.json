@@ -1,0 +1,41 @@
+{
+  "name": "smartc-web-ui",
+  "version": "1.0.0",
+  "description": "Web user interface for SmartC compiler",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deleterium/SmartC.git"
+  },
+  "keywords": [
+    "smartc",
+    "compiler",
+    "blockchain",
+    "c",
+    "typescript"
+  ],
+  "author": "Rui Deleterium",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/deleterium/SmartC/issues"
+  },
+  "homepage": "https://github.com/deleterium/SmartC#readme",
+  "scripts": {
+    "dev": "TARGET=dev node esbuild.config.js",
+    "lint": "npx eslint",
+    "build": "npm run lint && node esbuild.config.js",
+    "start": "npm run build && npx light-server -s . -p 7000 --no-reload"
+  },
+  "devDependencies": {
+    "esbuild": "^0.13.8",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "light-server": "^2.9.1",
+    "smartc-assembly-highlight": "^1.0.2",
+    "smartc-signum-compiler": "^1.0.2"
+  }
+}
