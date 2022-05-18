@@ -18,7 +18,6 @@ window.onload = () => {
     scode.addEventListener('paste', textKeyUp)
 
     document.getElementById('compile').addEventListener('click', compileCode)
-    document.getElementById('btn_help').addEventListener('click', detachHelp)
     document.getElementById('source_is_c').addEventListener('click', toggleLang)
     document.getElementById('save').addEventListener('click', SaveSource)
     document.getElementById('load').addEventListener('click', LoadSource)
@@ -330,19 +329,6 @@ function detachAssembly () {
         }
     })
     document.getElementById('assembly_fieldset').style.display = 'none'
-}
-
-function detachHelp () {
-    const helpage = WinBox.new({
-        title: 'Help page',
-        url: './htmlDocs/index.html',
-        height: '70%',
-        width: '70%',
-        x: 'center',
-        y: 'center',
-        top: 50
-    })
-    helpage.focus()
 }
 
 function fillForm (AtInfo) {
