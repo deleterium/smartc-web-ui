@@ -1,4 +1,4 @@
-import sah from 'https://cdn.jsdelivr.net/npm/smartc-assembly-highlight/dist/index.js'
+import sah from 'smartc-assembly-highlight'
 
 /* Following global functions are define on the files:
 WinBox          -> 3rd-party/winbox.bundle.js
