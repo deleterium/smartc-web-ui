@@ -1,12 +1,11 @@
-import { SmartC } from 'smartc-signum-compiler'
-import sah from 'smartc-assembly-highlight'
+import sah from 'https://cdn.jsdelivr.net/npm/smartc-assembly-highlight/dist/index.js'
 
 /* Following global functions are define on the files:
 WinBox          -> 3rd-party/winbox.bundle.js
 hljs            -> 3rd-party/highlight.min.js
 */
 
-/* global hljs WinBox */
+/* global hljs WinBox SmartC */
 
 window.onload = () => {
     const scode = document.getElementById('source-code')
