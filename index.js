@@ -1,11 +1,10 @@
-import sah from 'smartc-assembly-highlight'
-
 /* Following global functions are define on the files:
 WinBox          -> 3rd-party/winbox.bundle.js
 hljs            -> 3rd-party/highlight.min.js
+sah -> jsdelivr smartc-assembly-highlight package
 */
 
-/* global hljs WinBox SmartC */
+/* global hljs WinBox SmartC sah */
 
 window.onload = () => {
     const scode = document.getElementById('source-code')
