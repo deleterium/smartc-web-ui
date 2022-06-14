@@ -121,7 +121,7 @@ function compileCode () {
         const bcode = compiler.getMachineCode()
 
         sah.Config.preAll = ''
-        sah.Config.preAll = ''
+        sah.Config.preInstruction = '    '
         sah.Config.preLine = ''
         sah.Config.postLine = '<br>'
         document.getElementById('assembly_output').innerHTML = sah.colorText(asmCode)
@@ -203,6 +203,7 @@ function SetColorCode () {
             sah.Config.postAll = '<div>'
             sah.Config.preLine = "<div class='div_row'><div class='div_cell_a'>%line%</div><div class='div_cell_b'>"
             sah.Config.postLine = '</div></div>'
+            sah.Config.preInstruction = ''
             dest.innerHTML = sah.colorText(source.value)
         }
         source.className = 'transp'
