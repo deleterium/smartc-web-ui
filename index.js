@@ -130,6 +130,9 @@ function compileCode () {
 
         const t1 = new Date()
         let compileMessage = `<span class='msg_success'>Compile sucessfull!!!</span> <small>Done at ${t1.getHours()}:${t1.getMinutes()}:${t1.getSeconds()} in ${t1 - t0} ms.`
+        if (bcode.Warnings.length !== 0) {
+            compileMessage += `\n${bcode.Warnings}`
+        }
         compileMessage += `<br>Machine code hash ID: ${bcode.MachineCodeHashId}`
         if (document.getElementById('debug').checked) {
             compileMessage += '\n\n' + JSON.stringify(bcode, null, '    ')
