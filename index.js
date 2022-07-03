@@ -123,7 +123,7 @@ function compileCode () {
         const bcode = compiler.getMachineCode()
 
         sah.Config.preAll = ''
-        sah.Config.preInstruction = '    '
+        sah.Config.preInstruction = '       '
         sah.Config.preLine = ''
         sah.Config.postLine = '<br>'
         document.getElementById('assembly_output').innerHTML = sah.colorText(asmCode)

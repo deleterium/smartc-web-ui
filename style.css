@@ -138,7 +138,7 @@ label:hover                      { background: #ddf; }
     color: purple;
 }
 .asmComment {
-    color: darkgreen;
+    color: gray;
 }
 .asmDirective {
     color: brown;
