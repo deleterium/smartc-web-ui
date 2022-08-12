@@ -60,6 +60,10 @@ window.onload = () => {
     const h1TitleDom = document.getElementById('h1_title')
     h1TitleDom.innerHTML = h1TitleDom.innerHTML.replace('%version%', startUpTest.getCompilerVersion())
 
+    if (document.getElementsByTagName('body')[0].dataset.version !== startUpTest.getCompilerVersion()) {
+        alert('Detect old cache files. Please reload the page with Ctrl+F5.')
+    }
+
     hljs.addPlugin({
         'after:highlight': (result) => {
             let retString = '<div class="table">'
