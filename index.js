@@ -35,6 +35,10 @@ window.onload = () => {
         Dom.addEventListener('click', deployClick)
     })
 
+    const formDom = document.getElementById('deploy_form')
+    formDom.action = 'http://localhost:6876/api'
+    document.getElementsByName('deploy')[0].checked = true
+
     textKeyUp()
     toggleLang(document.getElementById('source_is_c'))
 
@@ -395,5 +399,26 @@ function toggleLang (ev) {
 
 function deployClick (evt) {
     const formDom = document.getElementById('deploy_form')
-    formDom.action = `http://localhost:${evt.currentTarget.value}/burst`
+    const userServer = document.getElementById('user_server').value
+    switch (evt.currentTarget.value) {
+    case '8125':
+        formDom.action = 'http://localhost:8125/api'
+        break
+    case '6876':
+        formDom.action = 'http://localhost:6876/api'
+        break
+    case 'manual':
+        if (!userServer.startsWith('https://')) {
+            alert('Only secure connection allowed. Server must starts with "https://"')
+            formDom.action = 'http://localhost:6876/api'
+            document.getElementsByName('deploy')[0].checked = true
+            return
+        }
+        if (confirm(`Your passphrase will be sent thru an encrypted connection.\n\nDo you trust the server ${userServer}?`)) {
+            formDom.action = userServer + '/api'
+            return
+        }
+        formDom.action = 'http://localhost:6876/api'
+        document.getElementsByName('deploy')[0].checked = true
+    }
 }

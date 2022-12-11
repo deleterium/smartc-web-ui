@@ -56,8 +56,17 @@
         <div id="deployment_window" class="div_window_normal">
             <section class="table">
                 <div class="div_row"><div class="div_cell">Deployment:</div><div class="div_cell">
-                    <label title="localhost:6876" class="default"><input type="radio" value="6876" name="deploy" checked="true"> Testnet </label>&nbsp;&nbsp;
-                    <label title="localhost:8125" class="default"><input type="radio" value="8125" name="deploy"> Main </label></div>
+                    <label title="localhost:6876" class="default">
+                        <input type="radio" value="6876" name="deploy" checked="true"> Testnet
+                    </label>&nbsp;&nbsp;
+                    <label title="localhost:8125" class="default">
+                        <input type="radio" value="8125" name="deploy"> Main 
+                    </label>&nbsp;&nbsp;
+                    <label title="manual" class="default">
+                        <input type="radio" value="manual" name="deploy">Manual
+                        <input type="text" id="user_server">
+                      </label>
+                      </div>
                 </div>
             </section>
             <form action="http://localhost:6876/burst" method="POST" target="formresponse" id="deploy_form" >
